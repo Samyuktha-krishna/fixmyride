@@ -1,3 +1,4 @@
+
 // Get the login form elements
 var riderLogin = document.getElementById("rider-login");
 var mechanicLogin = document.getElementById("mechanic-login");
@@ -37,7 +38,7 @@ riderLogin.addEventListener("submit", function(event) {
 mechanicLogin.addEventListener("submit", function(event) {
     event.preventDefault();
     // Redirect to the welcome page
-    window.location.href = "welmech.html";
+    window.location.href = "mechwelcome.html";
 });
 
 

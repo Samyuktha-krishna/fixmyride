@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    body {
+  font-family: 'lato', sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.responsive-table li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .table-row {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+  
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    .table-row li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+    
+  }
+}
+
+</style>
+<body>
+    <header>
+		<div class="logo">
+			<img src="fixmyride-logo.png" alt="FixMyRide Logo">
+			  <h1>FixMyRide-Mechanic Portal</h1>
+
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#active">Active customers</a></li>
+				<li><a href="#">History</a></li>
+        <li><a href="mechchatlist.html">Chat</a></li>
+			</ul>
+		</nav>
+	</header>
+    <br>
+    <br>
+    <br>
+
+<section id="active">
+    <div class="container">
+      <br>
+      <br> 
+      <br> 
+      <h2>Active Customers</h2>
+        
+        <ul class="responsive-table">
+          <li class="table-header">
+            <div class="col col-1"> Id</div>
+            <div class="col col-2">Customer Name</div>
+            <div class="col col-3">Distance</div>
+            <div class="col col-4">Status</div>
+          </li>
+          <li class="table-row">
+            <div class="col col-1"> 4410</div>
+            <div class="col col-2">Krish</div>
+            <div class="col col-3">4Kms</div>
+            <div class="col col-4">In repair</div>
+          </li>
+          <li class="table-row">
+            <div class="col col-1"> 4411</div>
+            <div class="col col-2">Sam</div>
+            <div class="col col-3">3Kms</div>
+            <div class="col col-4">Completed</div>
+          </li>
+          <li class="table-row">
+            <div class="col col-1"> 4412</div>
+            <div class="col col-2">Harsh</div>
+            <div class="col col-3">1Km</div>
+            <div class="col col-4">In repair</div>
+          </li>
+          
+        </ul>
+      </div>
+
+      <br>
+      <br>
+
+</section>
+
+<section id="history">
+  <div class="container">
+    <h2>Customer History</h2>
+    
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1"> Id</div>
+        <div class="col col-2">Customer Name</div>
+        <div class="col col-3">Distance</div>
+        <div class="col col-4">Status</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1"> 4409</div>
+        <div class="col col-2">Ramesh</div>
+        <div class="col col-3">7 Kms</div>
+        <div class="col col-4">Delivered</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1"> 4408</div>
+        <div class="col col-2">Saaradha</div>
+        <div class="col col-3">2Kms</div>
+        <div class="col col-4">Rejected</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1"> 4407</div>
+        <div class="col col-2">Harsha</div>
+        <div class="col col-3">6 Km</div>
+        <div class="col col-4">Delivered</div>
+      </li>
+      
+    </ul>
+  </div>
+
+</section>
+    
+    
+</body>
+</html>

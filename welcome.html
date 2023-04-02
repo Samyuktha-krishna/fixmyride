@@ -1,8 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Welcome to FixMyRide</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	<style>
+.service {
+  --img-scale: 1.001;
+  --title-color: black;
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: none;
+  background: #fff;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.service a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+
+/* basic article elements styling */
+.service h2 {
+  margin: 0 0 18px 0;
+  font-family: "Times New Roman";
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.service img {
+  max-width: 100%;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+.service-body {
+  padding: 24px;
+}
+
+.service a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #28666e;
+}
+
+.service a:focus {
+  outline: 1px dotted #28666e;
+}
+
+.service a .icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+
+/* using the has() relational pseudo selector to update our custom properties */
+.service:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+
+/************************ 
+Generic layout (demo looks)
+**************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.service{
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 34px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 960px) {
+  .services {
+    container: card/inline-size;
+  }
+  .services-body p {
+    display: none;
+  }
+}
+
+@container card (min-width: 380px) {
+  .services-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+  }
+  .services-body {
+    padding-left: 0;
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  figure img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+.serh1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+}
+
+
+
+
+		</style>
 </head>
 <body>
 	<header>
@@ -12,26 +170,29 @@
 		</div>
 		<nav>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#hero">Home</a></li>
+				<li><a href="#service">Services</a></li>
+				<li><a href="#about">About</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
-		<section class="hero">
+		<section class="hero" id="hero">
 			<h2>Welcome to FixMyRide</h2>
-			<p>Get your vehicle fixed by certified mechanics at affordable prices.</p>
+
+			<div>
+				<img class ="img01"src="img01.jpg" alt="img">
+			</div>
 			
 		</section>
 
                 <section class = "problem">
                         <h2>Don't worry that you are stuck! We'll help you..</h2>
-                        <a href="gmaps.html" class="button">
-                        <button>Fix It!</button>   
+                        <a href="gmaps.html" class="button">							
+                        <button class="button">Fix It On the Go!</button> 			  
                         </a>
+			<p>Get your vehicle fixed by certified mechanics at affordable prices.</p>
                         <!--<div id="map-divi" class="mapss">
                         <button id="showMapButton">Show Map</button>
                         </div>
@@ -39,20 +200,61 @@
                         <script src="script.js"></script>-->
                 </section>
 
+		
+
 		<section class="features">
-			<h3>Our Services</h3>
-			<ul>
-				<li><i class="fas fa-check"></i> Engine Repair</li>
-				<li><i class="fas fa-check"></i> Brake Replacement</li>
-				<li><i class="fas fa-check"></i> Oil Change</li>
-				<li><i class="fas fa-check"></i> Wheel Alignment</li>
-				<li><i class="fas fa-check"></i> Tire Puncture</li>
-			</ul>
+			<h3>We got you! Continue Your Journey..</h3>
+				<a href = "selfdrive.html" class = "button">
+				<button class="button" type="button">Drive by myself</button> 
+				</a>
 		</section>
 
-		<section class="about">
+
+    <h1 class="serh1">
+			Our Services
+		</h1>
+		
+	
+		
+    <section class="service" id="service">	
+			<services>
+			  <div class="article-wrapper">
+				<figure>
+				  <img src="https://boodmo.com/media/images/articles/93eafa3.jpg" alt="" />
+				</figure>
+				<div class="article-body">
+				  <h2>Engine Replacement</h2>
+				</div>
+			  </div>
+			</services>
+		   
+			<services>
+			  <div class="article-wrapper">
+				<figure>
+				  <img src="https://assets.goaaa.com/image/upload/w_auto,q_auto:best,f_auto/v1662048068/Via/when-replace-tires-via-magazine-aaa-so22-shutterstock-1907562673.jpg" alt="" />
+				</figure>
+				<div class="article-body">
+				  <h2>Tire Replacement</h2>
+				</div>
+			  </div>
+			</services>
+		
+			<services>
+			  <div class="article-wrapper">
+				<figure>
+				  <img src="https://content.jdmagicbox.com/comp/coimbatore/s8/0422px422.x422.210204133550.z7s8/catalogue/green-automobiles-singanallur-coimbatore-car-repair-and-services-0pe4eclh1x.jpg?clr=" alt="" />
+				</figure>
+				<div class="article-body">
+				  <h2>Complete Car Care</h2>
+				</div>
+			  </div>
+			</services>
+		  </section>
+
+		<section class="about" id="about">
 			<h3>About Us</h3>
 			<p>FixMyRide is the latest resource available to connect with a network of certified mechanics and state-of-the-art facilities at the most crucial time for any customer. We help you get immediate assistance during the time of breakdown anywhere in and around the city. We offer a wide range of services to help keep your journey continue smoothly!</p>
+			<p> 
 			<a href="#" class="button">Learn More</a>
 		</section>
 	</main>

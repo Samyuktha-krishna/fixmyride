@@ -1,3 +1,4 @@
+
 .login {
 	margin: 0 auto;
 	max-width: 500px;
@@ -6,7 +7,8 @@
 }
 
 .logo img {
-	max-width: 100px;
+	
+	height: 65%;
 }
 
 .login-type {
@@ -117,8 +119,8 @@ nav ul li a:hover {
 
 /* Hero Styles */
 .hero {
-	background-color: #f8f8f8;
-	padding: 100px 20px;
+	
+
 	text-align: center;
 }
 
@@ -243,7 +245,6 @@ footer p {
 }
 .problem {
 	background-color: #f8f8f8;
-	padding: 50px 20px;
 	text-align: center;
 }
 
@@ -270,5 +271,63 @@ body{
         height: 100vh;
 }
 
+.img01{
+	height: 10%;
+	width: 100%;
+}
+.button {
+  background-color:dodgerblue;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  
+
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-53:focus {
+  outline: 0;
+}
+
+.button-53:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button-53:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-53 {
+    padding: .75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+.img01{
+	width: 50%;
+}
 	
 
